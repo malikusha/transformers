@@ -8,8 +8,9 @@ name: Self-hosted runner (scheduled)
 
 on:
   repository_dispatch:
-  schedule:
-    - cron: "0 2 * * *"
+  push:
+    branches:
+      - "fix_scheduled_ci_256_limit_verify"
 
 env:
   HF_HOME: /mnt/cache
